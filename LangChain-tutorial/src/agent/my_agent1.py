@@ -2,6 +2,7 @@ from langchain.agents import create_agent
 
 from agent.my_llm import llm
 
+print("❌❌❌ LOADING my_agent1.py ❌❌❌")
 
 def send_email(to: str, subject: str, body: str) -> str:
     """
@@ -22,5 +23,6 @@ def send_email(to: str, subject: str, body: str) -> str:
 agent = create_agent(
     llm,
     tools=[send_email],
-    system_prompt="你是一个邮件助手，请始终使用 send_email 工具"
+    system_prompt="你是一个邮件助手，请始终使用 send_email 工具",
+    name="agent"
 )
