@@ -1,0 +1,6 @@
+20260113 17:22:57 - MainProcess | MainThread | db_utils.execute_query:165 - ERROR -(pymysql.err.ProgrammingError) (1146, "Table 'test_db1.scores' doesn't exist")
+[SQL: select * from scores]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+20260113 17:28:35 - MainProcess | MainThread | db_utils.validate_query:193 - ERROR -(pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* from scores' at line 1")
+[SQL: EXPLAIN SELECT ** from scores]
+(Background on this error at: https://sqlalche.me/e/20/f405)
