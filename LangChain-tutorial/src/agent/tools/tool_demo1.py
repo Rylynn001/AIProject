@@ -5,7 +5,8 @@ from agent.my_llm import llm, zhipuai_client
 
 
 @tool('my_web_search',description='互联网搜索工具，可以搜索所有的公开信息。')
-def web_search(query: str) -> str:
+#异步调用
+async def web_search(query: str) -> str:
     """互联网搜索的工具，可以搜索所有的公开的信息。
 
     Args:
