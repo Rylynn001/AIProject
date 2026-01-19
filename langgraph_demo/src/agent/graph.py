@@ -4,6 +4,8 @@ from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 from zhipuai import ZhipuAI
 
+from tool_demo7 import MySearchTool
+
 # 加载 .env
 dotenv.load_dotenv()
 
@@ -20,9 +22,9 @@ def get_weather(city: str) -> str:
     获取天气
     """
     return f"今天天气晴朗，在{city}!"
-
+my_tool = MySearchTool
 graph = create_react_agent(
     llm,
     tools=[get_weather],
-    prompt="你是一个智能助手"
+    prompt="你是一个智能助手，尽可能调用工具回答用户问题"
 )

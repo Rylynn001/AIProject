@@ -1,7 +1,7 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "agent": "./src/agent/my_agent2.py:web_agent"
+    "agent": "./src/agent/text_to_sql_agent.py:agent"
   },
   "env": "env"
 }
