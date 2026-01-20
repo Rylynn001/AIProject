@@ -1,12 +1,11 @@
 from langchain.agents import create_agent
 
-from agent.my_llm import zhipuai_client, llm
-from agent.tools.tool_demo1 import web_search
-from agent.tools.tool_demo2 import MyWebSearchTool
+from agent.my_llm import zhipuai_client
+from agent.tools.tool_demo7 import MySearchTool
 
 print("🔥🔥🔥 LOADING my_agent2.py 🔥🔥🔥")
 
-web_search_tool = MyWebSearchTool() #创建一个自定义的工具
+web_search_tool = MySearchTool()  #创建一个自定义的工具
 web_agent = create_agent(
     zhipuai_client,
     tools=[web_search_tool],
