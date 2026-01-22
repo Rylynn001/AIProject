@@ -20,4 +20,3 @@ final_template = FewShotPromptTemplate(
 chain = final_template | llm
 resp = chain.invoke("最小的质数是什么？")
 print(resp.content)
-
